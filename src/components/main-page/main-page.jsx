@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Offer from '../offer/offer';
+import OffersList from '../offers-list/offers-list';
 
 const MainPage = (props) => {
 
@@ -91,21 +91,9 @@ const MainPage = (props) => {
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">
-
-                {cards.map((item, index) => {
-                  return (
-                    <Offer
-                      key={index}
-                      title={item.title}
-                      img={item.img}
-                      price={item.price}
-                      type={item.type}
-                      rating={item.rating}
-                      isPremium={item.isPremium}
-                    />
-                  );
-                })}
-
+                <OffersList
+                  cards={cards}
+                />
               </div>
             </section>
             <div className="cities__right-section">

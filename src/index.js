@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/app/app';
-import cards from './mock-data';
+import cards from './mocks/offers';
 
 const Setting = {
   sum: 0

@@ -6,6 +6,7 @@ const offers = [
     type: `Apartment`,
     rating: `80%`,
     isPremium: true,
+    id: `01`,
   },
   {
     title: `Wood and stone place`,
@@ -14,6 +15,7 @@ const offers = [
     type: `Private room`,
     rating: `80%`,
     isPremium: false,
+    id: `02`,
   },
   {
     title: `Canal View Prinsengracht`,
@@ -22,6 +24,7 @@ const offers = [
     type: `Apartment`,
     rating: `80%`,
     isPremium: false,
+    id: `03`,
   },
   {
     title: `Nice, cozy, warm big bed apartment`,
@@ -30,6 +33,7 @@ const offers = [
     type: `Apartment`,
     rating: `100%`,
     isPremium: true,
+    id: `04`,
   },
   {
     title: `Wood and stone place`,
@@ -38,6 +42,7 @@ const offers = [
     type: `Private room`,
     rating: `80%`,
     isPremium: false,
+    id: `05`,
   }
 ];
 
