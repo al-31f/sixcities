@@ -1,11 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Offer = ({title, img, price, type, rating, isPremium}) => {
+const Offer = ({title, img, price, type, rating, isPremium, onMouseEnter, onMouseLeave, item}) => {
 
   return (
     <React.Fragment>
-      <article className="cities__place-card place-card">
+      <article className="cities__place-card place-card"
+        onMouseEnter={() => {
+          onMouseEnter(item);
+        }}
+        onMouseLeave={() => {
+          onMouseLeave();
+        }}
+      >
         {
           isPremium && (
             <div className="place-card__mark">
@@ -54,6 +61,9 @@ Offer.propTypes = {
   type: PropTypes.string.isRequired,
   rating: PropTypes.string.isRequired,
   isPremium: PropTypes.bool.isRequired,
+  onMouseEnter: PropTypes.func.isRequired,
+  onMouseLeave: PropTypes.func.isRequired,
+  item: PropTypes.object.isRequired,
 };
 
 export default Offer;
