@@ -17,7 +17,9 @@ const App = (props) => {
           <MainPage sum={sum} cards={cards} />
         </Route>
         <Route path="/login" exact component={LoginPage} />
-        <Route path="/favorites" exact component={FavoritesPage} />
+        <Route path="/favorites" exact >
+          <FavoritesPage cards={cards}/>
+        </Route>
         <Route path="/offer/:id?" exact component={RoomPage} />
         <Route component={NotFoundPage} />
       </Switch>
