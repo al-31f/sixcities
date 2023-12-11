@@ -1,7 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {useHistory} from 'react-router-dom/cjs/react-router-dom.min';
 
 const Offer = ({title, img, price, type, rating, isPremium, onMouseEnter, onMouseLeave, item}) => {
+
+  const history = useHistory();
+
+  function handleClick(evt) {
+    evt.preventDefault();
+    history.push(`/offer/`);
+  }
 
   return (
     <React.Fragment>
@@ -45,7 +53,7 @@ const Offer = ({title, img, price, type, rating, isPremium, onMouseEnter, onMous
             </div>
           </div>
           <h2 className="place-card__name">
-            <a href="#">{title}</a>
+            <a href="#" onClick={handleClick}>{title}</a>
           </h2>
           <p className="place-card__type">{type}</p>
         </div>
